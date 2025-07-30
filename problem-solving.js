@@ -72,4 +72,8 @@ fizzBuzz(40)
 
 - https://builtin.com/data-science/pseudocode
 
+- https://ocw.mit.edu/courses/res-tll-004-stem-concept-videos-fall-2013/resources/basic-programming-techniques/
+
+- https://www.youtube.com/watch?v=6XAu4EPQRmY
+
 */
