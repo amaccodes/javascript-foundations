@@ -2,7 +2,7 @@
 
 // links: https://javascript.info/arrow-functions-basics, https://javascript.info/function-expressions, and https://javascript.info/function-basics
 
-// basic syntax:
+// --------------------- basic syntax:
 
 /*
 
@@ -32,7 +32,7 @@ console.log(addition(2, 2))
 
 
 
-// arrow functions
+// -----------------arrow functions
 
 let answer = (x, y, z) => (x * y * z) ** z; 
 
@@ -40,7 +40,9 @@ console.log(answer(4, 2, 3))
 
 
 
-// function expression 
+
+
+// -------------- function expression 
 // declare the function
 let sayHi = function () {
     alert('Hello');
@@ -48,6 +50,25 @@ let sayHi = function () {
 
 // inoke the function
 sayHi();
+
+
+
+
+
+
+// ------------------  anonymous functions
+/*
+This is called an anonymous function, because it has no name. You'll often see
+anonymous functions when a function expects to receive another function as a parameter. In this 
+case, the function parameter is often passed as an anonymous function.
+*/
+
+(function () {
+    alert('Hello!')
+}) 
+
+// READ ABOUT FUNCTION SCOPE AND CONFLICT -------> https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts
+
 
 
 // !!!! JavaScript Call Stack 
@@ -78,7 +99,7 @@ let x = avg(1, 10)
 console.log(x)
 
 
-// !!!!!!!!!!! Stack Overfolow
+// !!!!!!!!!!! Stack Overflow
 /*
 
 The call stack has a fixed size, depending on the implementation of the host environment, either the web browser or Node.js.
@@ -158,7 +179,7 @@ function capitalize(string) {
     
 }
 
-
+// checking the fucntion in the console log
 console.log(capitalize('Aaron'))
 console.log(capitalize('AARON'))
 console.log(capitalize('Terrance'))
