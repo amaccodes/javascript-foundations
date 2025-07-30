@@ -95,7 +95,7 @@ function fn() {
     fn();
 }
 
-fn(); // stack overflow error
+// fn(); // stack overflow error
 
 
 // !!!!!!!!!!! Asynchronous JavaScript and event loops 
@@ -114,6 +114,67 @@ When the data is available, display it on the webpage.
 To do this, the JavaScript engine uses an event loop, which will be covered in the following tutorial.
 
 */
+
+
+// !!!!! EXERCISES FROM THE FUNCTIONS BASICS LESSON
+
+
+// create a function that takes a number and add it to 7
+
+let add7 = function (number) {
+    return number + 7
+}
+
+//invoke add7
+console.log(add7(7))
+
+
+// create a function that multiplies two values and returns the product
+
+function multiply(x, y) {
+    console.log(x * y)
+}
+// invoke multiply(x, y) function
+multiply(7, 3)
+
+
+// Write a function called capitalize that takes a string and returns that string with only
+// the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+
+function capitalize(string) {
+
+    if (string[0] == string[0].toUpperCase() && string.slice(1) == string.toLowerCase().slice(1)) {
+        return string
+    } else {
+        // make all characters lowercase
+        let word = string.toLowerCase();
+
+        // capitalize the first letter
+        let newString = word.charAt(0).toUpperCase() + word.slice(1)
+
+        // return value
+        return newString;
+    }
+    
+}
+
+
+console.log(capitalize('Aaron'))
+console.log(capitalize('AARON'))
+console.log(capitalize('Terrance'))
+console.log(capitalize('AnTHOny'))
+console.log(capitalize('everyday'))
+
+
+
+
+// Write a function called lastLetter that takes a string and returns the very last letter of that string:
+
+function lastLetter(string) {
+    return string.charAt(string.length - 1)
+}
+
+alert(lastLetter('New York'))
 
 
 
