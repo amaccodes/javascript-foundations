@@ -1,5 +1,6 @@
 // !!!!!!! Loops 
 
+
 /*
 
 Computers don’t get tired, and they’re really, really fast! For that reason, they are well suited
@@ -204,7 +205,7 @@ nums = [1,2,3,4,5,6,7,8,9]
 
 let updatedNums = nums.map(addOne)
 
-alert(updatedNums)
+console.log(updatedNums)
 
 
 // !!! The filter method - it expects a boolean as callback. or a function as an arguement that returns a boolean
@@ -317,7 +318,7 @@ function sumOfTripledEvenss(array) {
     let filtered_nums = array.filter((num) => num % 2 === 0)
     let tripled_nums = filtered_nums.map((num) => num * 3)
     let final = tripled_nums.reduce((acc, curr) => acc + curr)
-    alert(final)
+    //alert(final)
 }
 
 sumOfTripledEvenss(arr)
@@ -329,7 +330,89 @@ function sumOfTripledEvensss(array) {
     .map((num) => num * 3)
     .reduce((acc, curr) => acc + curr)
     
-    alert(final)
+    //alert(final)
 }
 
 sumOfTripledEvensss(arr)
+
+
+
+
+
+// !!!!!!!!!! ASSIGNMENT ---------------------------------------------------
+
+
+// !! Exercise 1: Translate border-left-width to borderLeftWidth
+
+function camelize(str) {
+    // get rid of the dashes split '-'
+    let strings = str.split('-')
+    console.log(strings)
+
+    // loop through all of the words other than the first one
+    for (i = 1; i < strings.length; i++) {
+        strings[i] = strings[i][0].toUpperCase() + strings[i].slice(1)
+    }
+
+    // join without the commas
+    final = strings.join('')
+    console.log(final)
+}
+
+words = ['background-noise', 'list-style-image', '-webkit-transition']
+
+for (word of words) {
+    camelize(word)
+}
+
+
+
+// !! Exercise 2: Filter range
+
+function isInRange(number, a, b) {
+    if (a <= number && b >= number) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function filterRange(array, a, b) {
+    return array.filter(num => isInRange(num, a, b))
+}
+
+arr = [5, 3, 8, 1]
+
+let x = filterRange(arr, 1, 4)
+
+console.log(x)
+
+
+// !! Exercise 3: Sort decreasing order
+
+function decreasingOrder(array) {
+    final = array.sort((a, b) => a - b)
+    console.log(final)
+}
+
+arr = [5, 2, 1, -10, 8]
+
+decreasingOrder(arr)
+
+
+// !! Exercise 4: Copy and sort array
+
+arr = ["HTML", "JavaScript", "CSS"];
+
+function copySorted(array) {
+    return array.slice().sort() // the .slice() saves the unmodified version of the array to its original name which in this case is arr
+}
+console.log(arr)
+
+final = copySorted(arr)
+
+console.log(arr)
+
+console.log(final)
+
+
