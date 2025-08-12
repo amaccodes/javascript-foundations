@@ -22,6 +22,8 @@ console.log(theHobbit.info());
 
 */
 
+// !!! Object constructor
+
 
 function Book(title, author, pages, readBook) {
     this.title = title
@@ -30,9 +32,9 @@ function Book(title, author, pages, readBook) {
     this.readBook = readBook
     this.info = function () {
         if (readBook === true) {
-            console.log(`${title} by ${author}, ${pages} pages, the book was read`)
+            console.log(`${title} by ${author}, is ${pages} pages, the book was read`)
         } else {
-            console.log(`${title} by ${author}, ${pages} pages, not read yet`)
+            console.log(`${title} by ${author}, is ${pages} pages, not read yet`)
         }
     }
 }
@@ -42,3 +44,28 @@ let readBook = false
 const favoriteBook = new Book('The Holy Bible', 'God', '~1200', readBook)
 
 favoriteBook.info()
+
+
+
+// !!!! Object prototypes 
+
+// All objects in javascript have a prototype. This prototype is
+// another object that the original object inherits from, and has 
+// access to all the prototype's methods and properties
+
+// giving the prototype of an object a function 
+Book.prototype.isGood = function () {
+    console.log(`This book is good!`)
+}
+// run this in the browsor developer console, this is how you can access it!! 
+console.log(Object.getPrototypeOf(favoriteBook))
+
+
+console.log(Object.getPrototypeOf(Book.prototype))
+
+
+console.log(Object.getPrototypeOf(favoriteBook) === Book.prototype)
+
+
+// by defualt every object has a parent prototype which is Object.prototype
+console.log(Object.getPrototypeOf(Object.prototype))// this will be null because the Object.prototype does not have a prototype
