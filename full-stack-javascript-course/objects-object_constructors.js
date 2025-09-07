@@ -69,3 +69,8 @@ console.log(Object.getPrototypeOf(favoriteBook) === Book.prototype)
 
 // by defualt every object has a parent prototype which is Object.prototype
 console.log(Object.getPrototypeOf(Object.prototype))// this will be null because the Object.prototype does not have a prototype
+
+
+
+
+
