@@ -23,6 +23,4 @@ class BankAccount {
     }
 }
 
-let account = new BankAccount(30000)
-
-console.log(account.balance)
+export {BankAccount}

@@ -9,7 +9,7 @@ const createPerson = function(birthdate, firstName, lastName) {
         },
 
         get age() {
-            currYear = new Date().getFullYear() 
+            let currYear = new Date().getFullYear() 
             if (new Date().getMonth() > this.birthdate.getMonth() || 
             new Date().getMonth() === this.birthdate.getMonth() && 
             new Date().getDate() >= this.birthdate.getDate()) {
@@ -21,9 +21,9 @@ const createPerson = function(birthdate, firstName, lastName) {
     }
 }
 
-let aaron = createPerson(new Date(2005, 9, 25), 'Aaron', 'McDonald')
+let aaron = createPerson(new Date(2005, 12, 25), 'Aaron', 'McDonald')
 
-console.log(aaron.fullName)
+console.log(aaron.age)
 
 
 
@@ -46,6 +46,6 @@ function newUser(username) {
     }
 }
 
-user1 = newUser('@aaronmcdonald')
+const user1 = newUser('@aaronmcdonald')
 user1.displayName = 'Aaron'
 console.log(user1.displayName)

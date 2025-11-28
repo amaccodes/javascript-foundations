@@ -61,7 +61,9 @@ Book.prototype.isGood = function () {
 console.log(Object.getPrototypeOf(favoriteBook))
 
 
-console.log(Object.getPrototypeOf(Book.prototype))
+console.log(favoriteBook.isGood())
+
+console.log(Object.getPrototypeOf(favoriteBook))
 
 
 console.log(Object.getPrototypeOf(favoriteBook) === Book.prototype)
